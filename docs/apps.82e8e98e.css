@@ -1,2 +1,2 @@
 #settings .setting{display:flex;justify-content:space-between;align-items:center}#settings #bg-file{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}#settings .buttons{display:flex;width:100%;justify-content:flex-end;margin-top:1em}#notepad{resize:both;overflow:hidden}#notepad .content{padding:0}#notepad .content textarea{border:0;width:100%;height:100%;overflow:scroll;display:block;resize:none;box-sizing:border-box}#notepad .content textarea:focus{outline:none}
-/*# sourceMappingURL=operate/apps.82e8e98e.css.map */
+/*# sourceMappingURL=apps.82e8e98e.css.map */
