@@ -16,7 +16,7 @@ class WindowClass {
      * @param {string} [options.size.width] Initial width
      * @param {string} [options.size.height] Initial height
      * @param {string} [options.size.minHeight] Minimum height
-     * @param {string} [options.size.minHeight] Maximum height
+     * @param {string} [options.size.maxHeight] Maximum height
      * @param {string} [options.size.minWidth] Minimum width
      * @param {string} [options.size.maxWidth] Maximum width
      */
