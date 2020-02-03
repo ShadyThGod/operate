@@ -1,0 +1,35 @@
+{
+  "name": "operate",
+  "version": "1.0.0",
+  "description": "A primitive recreation of an operating system inside the browser",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir=docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShadyThGod/operate.git"
+  },
+  "keywords": [
+    "operate",
+    "operating",
+    "system",
+    "javascript"
+  ],
+  "author": "shadythgod <amanharwara@gmail.com> (https://shadythgod.github.io)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ShadyThGod/operate/issues"
+  },
+  "homepage": "https://github.com/ShadyThGod/operate#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.25.0"
+  },
+  "dependencies": {
+    "draggabilly": "^2.2.0",
+    "moment": "^2.24.0",
+    "nanoid": "^2.1.11"
+  }
+}

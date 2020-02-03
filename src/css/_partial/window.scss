@@ -1,0 +1,57 @@
+.window {
+    background: $windowbg;
+    min-width: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    @include border();
+
+    .titlebar {
+        background: $titlebarbg;
+        font-weight: bold;
+        color: #ebeeff;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0.2em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        flex-grow: 1;
+    }
+
+    &.active .titlebar {
+        background: $titlebaractivebg;
+    }
+
+    .title {
+        -webkit-box-flex: 20;
+        flex-grow: 20
+    }
+
+    .controls {
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        max-width: 55px;
+    }
+
+    .controls .button {
+        padding: 0.2em;
+        margin: 0;
+        font-family: monospace;
+        font-weight: bolder;
+    }
+
+    .content {
+        padding: 1em;
+        flex-grow: 100;
+    }
+}

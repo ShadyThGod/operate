@@ -1,0 +1,27 @@
+$background: #57a8a9;
+
+$windowbg: #bbcac7;
+$titlebarbg: linear-gradient(to right, #86898e, #8a8d92);
+$titlebaractivebg: linear-gradient(to right, #0102aa, #0102a3);
+$buttonbg: #bfc7ca;
+$bordertopleft: #ddeeef;
+$borderbottomright: #000000c4;
+
+$startbg: #bfc7c9;
+$startfocus: #0200a8;
+
+$taskbaractive: #dadcda;
+
+@mixin border {
+    border-left: 2px solid $bordertopleft;
+    border-top: 2px solid $bordertopleft;
+    border-right: 2px solid $borderbottomright;
+    border-bottom: 2px solid $borderbottomright;
+}
+
+@mixin border-invert {
+    border-right: 2px solid $bordertopleft;
+    border-bottom: 2px solid $bordertopleft;
+    border-top: 2px solid $borderbottomright;
+    border-left: 2px solid $borderbottomright;
+}

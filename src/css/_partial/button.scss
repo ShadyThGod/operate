@@ -1,0 +1,33 @@
+.button {
+    background: $buttonbg;
+    color: #000;
+    line-height: 1em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    @include border();
+    -webkit-transition: border 0.1s;
+    transition: border 0.1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.25em 1em;
+    text-align: center;
+    font-family: inherit;
+    font-weight: normal;
+    margin: 0.5em;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        @include border-invert();
+    }
+}

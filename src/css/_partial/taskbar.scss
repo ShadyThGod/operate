@@ -1,0 +1,49 @@
+.taskbar {
+    padding: 0.1em 0.2em;
+    width: 99.6%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: $startbg;
+    border-top: 2px solid $bordertopleft;
+    font-size: 0.9em;
+    z-index: 10;
+
+    .button {
+        margin: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-weight: bold;
+    }
+
+    .tray-area {
+        @include border-invert();
+        padding: 0.2em;
+    }
+
+    .windows {
+        -webkit-box-flex: 2;
+        flex-grow: 2;
+        padding: 0 0.5em;
+        display: -webkit-box;
+        display: flex;
+        overflow: hidden;
+
+        .button {
+            margin: 0 0.1em;
+        }
+
+        .button.active {
+            @include border-invert();
+            background: $taskbaractive;
+        }
+    }
+
+    .time {
+        font-size: 0.85em;
+    }
+}
