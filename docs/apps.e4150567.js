@@ -7,4 +7,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./notepad.scss":"uaHn"}],"gwHY":[function(require,module,exports) {
 var e=require("./settings"),t=require("./notepad");module.exports={settingsWindow:e,notepadWindow:t};
 },{"./settings":"tDaY","./notepad":"J3M3"}]},{},["gwHY"], null)
-//# sourceMappingURL=/apps.e4150567.js.map
+//# sourceMappingURL=operate/apps.e4150567.js.map

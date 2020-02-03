@@ -35,4 +35,4 @@ module.exports=function(n){return new Promise(function(e,o){var r=document.creat
 },{}],0:[function(require,module,exports) {
 var b=require("OFq0");b.register("css",require("OQtf"));b.register("js",require("VdRH"));
 },{}]},{},[0,"QvaY"], null)
-//# sourceMappingURL=/js.15db403b.js.map
+//# sourceMappingURL=operate/js.15db403b.js.map
