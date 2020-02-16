@@ -2,7 +2,7 @@
 
 Operate is a very primitive re-creation of an operating system inside the browser. It started as an attempt to re-create the style of an operating system in CSS, and then I went ahead and tried to create an API around it.
 
-**[Use Operate](https://shadythgod.github.io/operate)**
+**[Use Operate](https://operate.amanharwara.xyz/)**
 
 ## Why?
 
@@ -24,7 +24,7 @@ There aren't any useful apps either. However, I've built the system with extensi
 
 ## How To Use
 
-Go to [this link](https://shadythgod.github.io/operate) to use Operate.
+Go to [this link](https://operate.amanharwara.xyz/) to use Operate.
 
 If you want to run Operate on your own computer, follow these steps:
 

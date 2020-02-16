@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShadyThGod/operate.git"
+    "url": "git+https://github.com/amanharwara/operate.git"
   },
   "keywords": [
     "operate",
@@ -17,12 +17,12 @@
     "system",
     "javascript"
   ],
-  "author": "shadythgod <amanharwara@gmail.com> (https://shadythgod.github.io)",
+  "author": "Aman Harwara <amanharwara@gmail.com> (https://amanharwara.xyz)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ShadyThGod/operate/issues"
+    "url": "https://github.com/amanharwara/operate/issues"
   },
-  "homepage": "https://github.com/ShadyThGod/operate#readme",
+  "homepage": "https://github.com/amanharwara/operate#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "sass": "^1.25.0"
