@@ -46,15 +46,15 @@ The example below will explain it to you:
 
 Create a new folder inside the _apps_ directory with the name of the app. E.g. `newApp`
 
-- Create the main file inside that folder. E.g. `newApp.js`. This will be the file that will be loaded.
+- Create the main `index.js` file inside that folder. This will be the file that will be loaded.
 
-- Create a CSS file if you want. E.g. `newApp.css`. This will imported inside the **newApp.js** file.
+- Create a CSS file if you want. E.g. `newApp.css`. This will imported inside the **index.js** file.
 
-- Inside the `newApp.js` file, import your CSS using `import` statement
+- Inside the `index.js` file, import your CSS using `import` statement
 
 - Export an Object containing any options you want to use for the Window class.
 
-- Import the `newApp.js` file in the `index.js` file inside the apps directory.
+- Import the folder in the `index.js` file inside the apps directory.
 
 ### Example:
 
@@ -65,7 +65,7 @@ _newApp.css_:
 }
 ```
 
-_newApp.js_:
+_newApp/index.js_:
 ```js
 import * as newAppCSS from './newApp.css';
 
