@@ -24,7 +24,7 @@ There aren't any useful apps either. However, I've built the system with extensi
 
 ## How To Use
 
-Go to [this link](https://amnaharwara.github.io/operate) to use Operate.
+Go to [this link](https://amanharwara.github.io/operate) to use Operate.
 
 If you want to run Operate on your own computer, follow these steps:
 
