@@ -31,5 +31,8 @@
     "draggabilly": "^2.2.0",
     "moment": "^2.24.0",
     "nanoid": "^2.1.11"
+  },
+  "resolutions": {
+    "minimist": ">=1.2.2"
   }
 }
