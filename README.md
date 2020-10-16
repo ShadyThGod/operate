@@ -13,13 +13,13 @@ There aren't any useful apps either. However, I've built the system with extensi
 ## Features
 
 ### Current
+- Calculator app
 - Basic Notepad app
 - Basic Settings app that allows you to change the background
 
 ### Upcoming
 - A basic drawing app
 - A very basic filesystem
-- Calculator
 - Command Prompt
 
 ## How To Use
