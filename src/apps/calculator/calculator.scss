@@ -1,0 +1,113 @@
+$bordertopleft: #ddeeef;
+$borderbottomright: #000000c4;
+#calculator {
+  display: block;
+  height: 41.5% !important;
+  min-height: 41.5% !important;
+  width: 17%;
+  min-width: 17% !important;
+
+  .history-container {
+    display: none;
+
+    textarea {
+      resize: none;
+      text-align: right;
+      white-space: pre;
+      overflow-x: hidden;
+      padding-right: 0.5rem;
+      border-right: 2px solid #ddeeef;
+      border-bottom: 2px solid #ddeeef;
+      border-top: 2px solid #000000c4;
+      border-left: 2px solid #000000c4;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &.show-history {
+    width: 29% !important;
+    min-width: 29% !important;
+    min-height: 42% !important;
+    box-sizing: border-box;
+
+    .content {
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .history-container {
+      display: flex;
+    }
+
+    .input-container {
+      margin-right: 0.5rem;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .history-checkbox-input {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+
+    input {
+      border-radius: 0;
+    }
+  }
+
+  .content {
+    padding: 0.3rem;
+
+    .button-rows {
+      padding: 0.3rem 0;
+      padding-bottom: 0;
+    }
+
+    .calc-input {
+      width: 100%;
+      box-sizing: border-box;
+      -moz-appearance: textfield;
+
+      border-radius: 0;
+      border-right: 2px solid $bordertopleft;
+      border-bottom: 2px solid $bordertopleft;
+      border-top: 2px solid $borderbottomright;
+      border-left: 2px solid $borderbottomright;
+
+      text-align: right;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .row {
+      display: flex;
+      padding: 0;
+      justify-content: stretch;
+      align-items: center;
+      box-sizing: border-box;
+
+      &:last-child .button {
+        margin-bottom: 0;
+      }
+
+      .button {
+        box-sizing: border-box;
+        margin: 0 0 0.2rem 0;
+        flex-grow: 1;
+      }
+
+      .number-button {
+        max-width: 25%;
+      }
+    }
+  }
+}

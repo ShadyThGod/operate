@@ -1,23 +1,23 @@
 #settings {
-    .setting {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    #bg-file {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
-    }
+  #bg-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
 
-    .buttons {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-        margin-top: 1em;
-    }
+  .buttons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
 }
