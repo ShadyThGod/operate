@@ -19,6 +19,11 @@ class WindowClass {
    * @param {Element} [options.content] Window Content
    * @param {function[]} [options.eventListeners] Custom event listeners added to the window element
    * @param {string|string[]} [options.customClass] Custom class or classes
+   * @param {Object[]} [options.menu] Object defining a menu
+   * @param {string} [options.menu[].label] Label for menu item
+   * @param {Object[]} [options.menu[].submenu] Object defining the submenu
+   * @param {string} [options.menu[].submenu[].label] Label for submenu item
+   * @param {function} [options.menu[].submenu[].click] Click handler for submenu item
    */
   constructor(options) {
     this.title = options.title || "Window";
@@ -33,6 +38,7 @@ class WindowClass {
     this.eventListeners = options.eventListeners || undefined;
     this.size = options.size || undefined;
     this.onLoadFunction = options.onLoadFunction || undefined;
+    this.menu = options.menu || undefined;
     this.draggie = undefined;
 
     this.DOMElement = this.getDOMElement();
@@ -175,6 +181,48 @@ class WindowClass {
     titlebar.appendChild(title);
     titlebar.appendChild(controls);
 
+    let menu = document.createElement("div");
+    if (this.menu) {
+      menu.className = "menu";
+
+      this.menu.forEach((menuItem) => {
+        let menuItemDOM = document.createElement("div");
+        menuItemDOM.className = "item";
+        menuItemDOM.textContent = menuItem.label;
+
+        menuItemDOM.onclick = (e) => {
+          if (document.querySelector(".active-item")) {
+            document
+              .querySelector(".active-item")
+              .classList.remove("active-item");
+          }
+
+          if (e.target.classList.contains("active-item")) {
+            e.target.classList.remove("active-item");
+          } else {
+            e.target.classList.add("active-item");
+          }
+        };
+
+        if (menuItem.submenu) {
+          let subMenuDOM = document.createElement("div");
+          subMenuDOM.className = "submenu";
+          menuItem.submenu.forEach((subMenuItem) => {
+            let subMenuItemDOM = document.createElement("div");
+            subMenuItemDOM.className = "item";
+            subMenuItemDOM.textContent = subMenuItem.label;
+            subMenuItemDOM.onclick = subMenuItem.click;
+            subMenuDOM.appendChild(subMenuItemDOM);
+          });
+          menuItemDOM.appendChild(subMenuDOM);
+        }
+
+        menu.appendChild(menuItemDOM);
+      });
+    } else {
+      menu = undefined;
+    }
+
     let content = document.createElement("div");
     content.className = "content";
     content.appendChild(this.content);
@@ -188,6 +236,7 @@ class WindowClass {
     }
 
     DOMElement.appendChild(titlebar);
+    if (this.menu && menu) DOMElement.appendChild(menu);
     DOMElement.appendChild(content);
 
     let taskbarButton = document.createElement("div");

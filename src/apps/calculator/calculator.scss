@@ -56,9 +56,40 @@ $borderbottomright: #000000c4;
   .history-checkbox-input {
     font-size: 1rem;
     margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
 
     input {
+      display: inline-flex;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: #fff;
+      width: 0.85rem;
+      height: 0.85rem;
       border-radius: 0;
+      border-right: 2px solid #ddeeef;
+      border-bottom: 2px solid #ddeeef;
+      border-top: 2px solid #000000c4;
+      border-left: 2px solid #000000c4;
+      margin-right: 0.5rem;
+
+      &::after {
+        content: "";
+        position: relative;
+      }
+
+      &:checked::after {
+        width: 2px;
+        height: 6px;
+        border: 2px solid #000;
+        border-top: 0;
+        border-left: 0;
+        left: 3px;
+        top: 0px;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+      }
     }
   }
 

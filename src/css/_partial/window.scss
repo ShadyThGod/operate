@@ -1,57 +1,108 @@
 .window {
-    background: $windowbg;
-    min-width: 30%;
-    position: absolute;
+  background: $windowbg;
+  min-width: 30%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  @include border();
+
+  .titlebar {
+    background: $titlebarbg;
+    font-weight: bold;
+    color: #ebeeff;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0.2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-grow: 1;
+  }
 
-    @include border();
+  &.active .titlebar {
+    background: $titlebaractivebg;
+  }
 
-    .titlebar {
-        background: $titlebarbg;
-        font-weight: bold;
-        color: #ebeeff;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
-        padding: 0.2em;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        flex-grow: 1;
+  .title {
+    -webkit-box-flex: 20;
+    flex-grow: 20;
+  }
+
+  .controls {
+    display: -webkit-box;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 55px;
+  }
+
+  .controls .button {
+    padding: 0.2em;
+    margin: 0;
+    font-family: monospace;
+    font-weight: bolder;
+
+    &:not(:last-child) {
+      margin-right: 0.3rem;
+    }
+  }
+
+  .menu {
+    display: flex;
+    width: 100%;
+    user-select: none;
+    font-size: 0.95rem;
+    background: #c0c0c0;
+    box-sizing: border-box;
+
+    & > .item {
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      position: relative;
     }
 
-    &.active .titlebar {
-        background: $titlebaractivebg;
+    .active-item .submenu {
+      display: flex;
     }
 
-    .title {
-        -webkit-box-flex: 20;
-        flex-grow: 20
+    .item:hover,
+    .active-item {
+      background: #000080;
+      color: #fff;
     }
 
-    .controls {
-        display: -webkit-box;
-        display: flex;
-        justify-content: space-around;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-flex: 1;
-        flex-grow: 1;
-        max-width: 55px;
-    }
+    .submenu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      @include border();
+      width: max-content;
+      .item {
+        padding: 0.4rem 1.75rem;
+        background: #c0c0c0;
+        color: #000;
+        cursor: pointer;
+        font-size: 0.95rem;
 
-    .controls .button {
-        padding: 0.2em;
-        margin: 0;
-        font-family: monospace;
-        font-weight: bolder;
+        &:hover {
+          background: #000080;
+          color: #fff;
+        }
+      }
     }
+  }
 
-    .content {
-        padding: 1em;
-        flex-grow: 100;
-    }
+  .content {
+    padding: 1em;
+    flex-grow: 100;
+  }
 }

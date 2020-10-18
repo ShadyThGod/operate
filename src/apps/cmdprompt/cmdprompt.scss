@@ -1,0 +1,58 @@
+#cmdprompt {
+  width: 30rem;
+  min-width: 30rem;
+  overflow: hidden;
+
+  .content {
+    padding: 0.15rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .command-prompt {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    min-height: 20rem;
+    max-height: 20rem;
+    font-family: Courier, "Courier New", monospace;
+    font-weight: 800;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .prompt {
+    display: flex;
+    align-items: center;
+
+    & > :first-child {
+      margin-right: 0.25rem;
+    }
+
+    & > :last-child {
+      width: 100%;
+    }
+
+    input {
+      background: transparent;
+      color: #fff;
+      font-family: inherit;
+      font-weight: inherit;
+      border: 0;
+      width: 100%;
+    }
+  }
+
+  .result {
+    margin: 0.4rem 0;
+  }
+
+  .command-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+}

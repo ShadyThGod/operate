@@ -73,6 +73,12 @@ document.body.addEventListener("click", function (e) {
   if (!e.target.closest(".start")) {
     toggle_start_menu("close");
   }
+  // Close window menu if not in focus
+  if (e.target.parentElement.className !== "menu") {
+    if (document.querySelector(".active-item")) {
+      document.querySelector(".active-item").classList.remove("active-item");
+    }
+  }
 });
 
 document.querySelector(".time").textContent = new Date().toLocaleTimeString(
