@@ -66,7 +66,7 @@ function inputKeyDownHandler(e) {
     let command = parseCommand(e.target.value);
     runCommand(command);
   }
-  if (e.key === "ArrowUp") {
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
     e.preventDefault();
     let history = window.State.CmdPrompt.history;
     if (history.length !== 0) {

@@ -1,7 +1,9 @@
 #cmdprompt {
   width: 30rem;
-  min-width: 30rem;
+  min-width: 20rem;
+  min-height: 10rem;
   overflow: hidden;
+  resize: both;
 
   .content {
     padding: 0.15rem;
@@ -16,8 +18,7 @@
     height: 100%;
     background: #000;
     color: #fff;
-    min-height: 20rem;
-    max-height: 20rem;
+    min-height: 10rem;
     font-family: Courier, "Courier New", monospace;
     font-weight: 800;
     padding: 0.3rem 0.5rem;

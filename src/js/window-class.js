@@ -99,7 +99,7 @@ class WindowClass {
       handle: ".titlebar",
     });
     this.draggie = draggie;
-    if (this.onLoadFunction !== undefined) this.onLoadFunction();
+    if (this.onLoadFunction !== undefined && appended) this.onLoadFunction();
     if (this.eventListeners !== undefined)
       this.registerEventListeners(this.eventListeners);
   }

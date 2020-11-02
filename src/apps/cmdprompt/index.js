@@ -11,9 +11,11 @@ function onLoad() {
     currentIndexInHistory: undefined,
   };
 
-  document
-    .getElementById("command-prompt-content")
-    .appendChild(getPromptElement());
+  if (!document.querySelector(".prompt")) {
+    document
+      .getElementById("command-prompt-content")
+      .appendChild(getPromptElement());
+  }
   document
     .getElementById("prompt-input")
     .addEventListener("keydown", inputKeyDownHandler);
